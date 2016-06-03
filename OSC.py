@@ -872,7 +872,7 @@ def _readDouble(data):
 def decodeOSC(data):
 	"""Converts a binary OSC message to a Python list. 
 	"""
-	table = {"i":_readInt, "f":_readFloat, "s":_readString, "b":_readBlob, "d":_readDouble, "t":_readTimeTag}
+	table = {"i":_readInt, "h":_readLong, "f":_readFloat, "s":_readString, "b":_readBlob, "d":_readDouble, "t":_readTimeTag}
 	decoded = []
 	address,  rest = _readString(data)
 	if address.startswith(","):
